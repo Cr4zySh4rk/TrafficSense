@@ -19,7 +19,7 @@
 #define s4 42//Sensor at S1
 
 int a=1,b=1,c=1,d=1;
-int c1,c2,c3,c4;
+int c1,c2,c3,c4;//congestion flags, ideally recieved from the next connecting signals
 
 void setup()
 {
@@ -231,17 +231,14 @@ void sensors_read()
   b=digitalRead(s2);
   c=digitalRead(s3);
   d=digitalRead(s4);
-  c1=1;
-  c2=1;
-  c3=1;
-  c4=1;
+  c1=0;c2=0; c3=1;c4=0;//here we are just setting some lanes as congested for demo, this data must be actually recieved from the next connecting signals when implemented
 }
 
 void congestion_1()
 {
     if(c1==1)
      {
-        Serial.println("Signal 1 is congested");
+        Serial.println("Signal 1 is congested!");
         for(int i=0;i<15;i++)
         {
           digitalWrite(y1, LOW);
@@ -259,7 +256,7 @@ void congestion_2()
 {
     if(c2==1)
      {
-        Serial.println("Signal 2 is congested");
+        Serial.println("Signal 2 is congested!");
         for(int i=0;i<15;i++)
         {
           digitalWrite(y2, LOW);
@@ -277,7 +274,7 @@ void congestion_3()
 {
     if(c3==1)
      {
-        Serial.println("Signal 3 is congested");
+        Serial.println("Signal 3 is congested!");
         for(int i=0;i<15;i++)
         {
           digitalWrite(y3, LOW);
@@ -295,7 +292,7 @@ void congestion_4()
 {
     if(c4==1)
      {
-        Serial.println("Signal 4 is congested");
+        Serial.println("Signal 4 is congested!");
         for(int i=0;i<15;i++)
         {
           digitalWrite(y4, LOW);
