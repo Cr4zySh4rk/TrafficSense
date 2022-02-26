@@ -19,6 +19,7 @@
 #define s4 42//Sensor at S1
 
 int a=1,b=1,c=1,d=1;
+int c1,c2,c3,c4;
 
 void setup()
 {
@@ -57,159 +58,159 @@ void loop()
   else if(a==0&&b==1&&c==1&&d==1)//A has traffic
   {
     signal_1();
-    delay(7500);
+    congestion_1();
     stop_1();  
   }
   else if(a==1&&b==0&&c==1&&d==1)//B has traffic
   {
     signal_2();
-    delay(7500);
+    congestion_2();
     stop_2();  
   }
   else if(a==1&&b==1&&c==0&&d==1)//C has traffic
   {
     signal_3();
-    delay(7500);
+    congestion_3();
     stop_3();  
   }
   else if(a==1&&b==1&&c==1&&d==0)//D has traffic
   {
     signal_4();
-    delay(7500);
+    congestion_4();
     stop_4();  
   }
   else if(a==0&&b==0&&c==1&&d==1)//A & B have traffic
   {
     signal_1();
-    delay(7500);
+    congestion_1();
     stop_1();
     delay(250);
     signal_2();
-    delay(7500);
+    congestion_2();
     stop_2();  
   }
   else if(a==1&&b==0&&c==0&&d==1)//B & C have traffic
   {
     signal_2();
-    delay(7500);
+    congestion_2();
     stop_2();
     delay(250);
     signal_3();
-    delay(7500);
+    congestion_3();
     stop_3();  
   }
   else if(a==1&&b==1&&c==0&&d==0)//C & D have traffic
   {
     signal_3();
-    delay(7500);
+    congestion_3();
     stop_3();
     delay(250);
     signal_4();
-    delay(7500);
+    congestion_4();
     stop_4();  
   }
   else if(a==0&&b==1&&c==1&&d==0)//D & A have traffic
   {
     signal_4();
-    delay(7500);
+    congestion_4();
     stop_4();
     delay(250);
     signal_1();
-    delay(7500);
+    congestion_1();
     stop_1();  
   }
   else if(a==1&&b==0&&c==1&&d==0)//D & B have traffic
   {
     signal_4();
-    delay(7500);
+    congestion_4();
     stop_4();
     delay(250);
     signal_2();
-    delay(7500);
+    congestion_2();
     stop_2();  
   }
   else if(a==0&&b==1&&c==0&&d==1)//C & A have traffic
   {
     signal_3();
-    delay(7500);
+    congestion_3();
     stop_3();
     delay(250);
     signal_1();
-    delay(7500);
+    congestion_1();
     stop_1();  
   }
   else if(a==1&&b==0&&c==0&&d==0)//B, C & D have traffic | A doesn't have traffic
   {
     signal_2();
-    delay(7500);
+    congestion_2();
     stop_2();
     delay(250);
     signal_3();
-    delay(7500);
+    congestion_3();
     stop_3();
     delay(250);
     signal_4();
-    delay(7500);
+    congestion_4();
     stop_4();  
   }
   else if(a==0&&b==1&&c==0&&d==0)//A, C & D have traffic | B doesn't have traffic
   {
     signal_1();
-    delay(7500);
+    congestion_1();
     stop_1();
     delay(250);
     signal_3();
-    delay(7500);
+    congestion_3();
     stop_3();
     delay(250);
     signal_4();
-    delay(7500);
+    congestion_4();
     stop_4();  
   }
   else if(a==0&&b==0&&c==1&&d==0)//A, B & D have traffic | C doesn't have traffic
   {
     signal_1();
-    delay(7500);
+    congestion_1();
     stop_1();
     delay(250);
     signal_2();
-    delay(7500);
+    congestion_2();
     stop_2();
     delay(250);
     signal_4();
-    delay(7500);
+    congestion_4();
     stop_4();  
   }
   else if(a==0&&b==0&&c==0&&d==1)//A, B & C have traffic | D doesn't have traffic
   {
     signal_1();
-    delay(7500);
+    congestion_1();
     stop_1();
     delay(250);
     signal_2();
-    delay(7500);
+    congestion_2();
     stop_2();
     delay(250);
     signal_3();
-    delay(7500);
+    congestion_3();
     stop_3();  
   }
   else //all lanes have equal traffic
   {
     signal_1();
-    delay(4500);
+    congestion_1();
     stop_1();
     delay(250);
     signal_2();
-    delay(4500);
+    congestion_2();
     stop_2();
     delay(250);
     signal_3();
-    delay(4500);
+    congestion_3();
     stop_3();
     delay(250);
     signal_4();
-    delay(4500);
+    congestion_4();
     stop_4(); 
   }
 }
@@ -230,6 +231,74 @@ void sensors_read()
   b=digitalRead(s2);
   c=digitalRead(s3);
   d=digitalRead(s4);
+  c1=1;
+  c2=1;
+  c3=1;
+  c4=1;
+}
+
+void congestion_1()
+{
+  for(int i=0;i<15;i++)
+    {
+      if(c1==1)
+      {
+        digitalWrite(y1, LOW);
+        delay(250);
+        digitalWrite(y1, HIGH);
+        delay(250);
+      }
+      else
+        delay(500);
+    }
+}
+
+void congestion_2()
+{
+  for(int i=0;i<15;i++)
+    {
+      if(c2==1)
+      {
+        digitalWrite(y2, LOW);
+        delay(250);
+        digitalWrite(y2, HIGH);
+        delay(250);
+      }
+      else
+        delay(500);
+    }
+}
+
+void congestion_3()
+{
+  for(int i=0;i<15;i++)
+    {
+      if(c3==1)
+      {
+        digitalWrite(y3, LOW);
+        delay(250);
+        digitalWrite(y3, HIGH);
+        delay(250);
+      }
+      else
+        delay(500);
+    }
+}
+
+void congestion_4()
+{
+  for(int i=0;i<15;i++)
+    {
+      if(c4==1)
+      {
+        digitalWrite(y4, LOW);
+        delay(250);
+        digitalWrite(y4, HIGH);
+        delay(250);
+      }
+      else
+        delay(500);
+    }
 }
 
 void signal_1()
