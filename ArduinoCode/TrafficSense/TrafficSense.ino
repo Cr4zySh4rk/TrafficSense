@@ -239,66 +239,74 @@ void sensors_read()
 
 void congestion_1()
 {
-  for(int i=0;i<15;i++)
-    {
-      if(c1==1)
-      {
-        digitalWrite(y1, LOW);
-        delay(250);
-        digitalWrite(y1, HIGH);
-        delay(250);
-      }
-      else
-        delay(500);
-    }
+    if(c1==1)
+     {
+        Serial.println("Signal 1 is congested");
+        for(int i=0;i<15;i++)
+        {
+          digitalWrite(y1, LOW);
+          delay(250);
+          digitalWrite(y1, HIGH);
+          delay(250);
+        }
+     }
+    else
+        for(int i=0;i<15;i++)
+          delay(500);
 }
 
 void congestion_2()
 {
-  for(int i=0;i<15;i++)
-    {
-      if(c2==1)
-      {
-        digitalWrite(y2, LOW);
-        delay(250);
-        digitalWrite(y2, HIGH);
-        delay(250);
-      }
-      else
-        delay(500);
-    }
+    if(c2==1)
+     {
+        Serial.println("Signal 2 is congested");
+        for(int i=0;i<15;i++)
+        {
+          digitalWrite(y2, LOW);
+          delay(250);
+          digitalWrite(y2, HIGH);
+          delay(250);
+        }
+     }
+    else
+        for(int i=0;i<15;i++)
+          delay(500);
 }
 
 void congestion_3()
 {
-  for(int i=0;i<15;i++)
-    {
-      if(c3==1)
-      {
-        digitalWrite(y3, LOW);
-        delay(250);
-        digitalWrite(y3, HIGH);
-        delay(250);
-      }
-      else
-        delay(500);
-    }
+    if(c3==1)
+     {
+        Serial.println("Signal 3 is congested");
+        for(int i=0;i<15;i++)
+        {
+          digitalWrite(y3, LOW);
+          delay(250);
+          digitalWrite(y3, HIGH);
+          delay(250);
+        }
+     }
+    else
+        for(int i=0;i<15;i++)
+          delay(500);
 }
 
 void congestion_4()
 {
-  for(int i=0;i<15;i++)
-    {
-      if(c4==1)
-      {
-        digitalWrite(y4, LOW);
-        delay(250);
-        digitalWrite(y4, HIGH);
-        delay(250);
-      }
-      else
-        delay(500);
-    }
+    if(c4==1)
+     {
+        Serial.println("Signal 4 is congested");
+        for(int i=0;i<15;i++)
+        {
+          digitalWrite(y4, LOW);
+          delay(250);
+          digitalWrite(y4, HIGH);
+          delay(250);
+        }
+     }
+    else
+        for(int i=0;i<15;i++)
+          delay(500);
 }
 
 void signal_1()
