@@ -1,4 +1,6 @@
 # Traffic Sense
+![Screenshot 2023-11-18 at 4 46 03 PM](https://github.com/Cr4zySh4rk/TrafficSense/assets/75577562/4358a9dd-33ca-405d-b380-11f66f32ac87)
+
 Demonstration video: https://www.youtube.com/embed/iCuPKTIaC1o?si=IKwfq4ZvZk6_D65f
 ## Requirements:
 Arduino IDE
