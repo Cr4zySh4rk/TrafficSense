@@ -1,10 +1,10 @@
 # Traffic Sense
-
-Requirements:
+https://www.youtube.com/watch?v=iCuPKTIaC1o&list=PLHlApcYa_ereVNYtvP7e-0ljmGKZiAVZQ
+## Requirements:
 Arduino IDE
 Arduino Mega
 ******************************************************************************
-Process:
-Download the ArduinoCode folder along with the TrafficSense.ino file
-Open arduino IDE and select this folder to open
-Upload the code to arduino and make connections as per circuit diagram.
+## Installation:
+1) Download the ArduinoCode folder along with the TrafficSense.ino file
+2) Open arduino IDE and select this folder to open
+3) Upload the code to arduino and make connections as per circuit diagram.
