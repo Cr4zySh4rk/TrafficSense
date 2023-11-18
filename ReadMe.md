@@ -1,5 +1,5 @@
 # Traffic Sense
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iCuPKTIaC1o?si=IKwfq4ZvZk6_D65f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+Demonstration video: https://www.youtube.com/embed/iCuPKTIaC1o?si=IKwfq4ZvZk6_D65f
 ## Requirements:
 Arduino IDE
 Arduino Mega
