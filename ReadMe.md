@@ -1,5 +1,5 @@
 # Traffic Sense
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/iCuPKTIaC1o&list=PLHlApcYa_ereVNYtvP7e-0ljmGKZiAVZQ/0.jpg)](https://www.youtube.com/watch?v=iCuPKTIaC1o&list=PLHlApcYa_ereVNYtvP7e-0ljmGKZiAVZQ)
+[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=StTqXEQ2l-Y "Everything Is AWESOME")
 ## Requirements:
 Arduino IDE
 Arduino Mega
